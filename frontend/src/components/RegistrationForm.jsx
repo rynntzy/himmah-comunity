@@ -5,11 +5,9 @@ import confetti from 'canvas-confetti';
 
 const PRODI_OPTIONS = [
   'Teknik Informatika',
-  'Sistem Informasi',
-  'Teknik Elektro',
-  'Teknik Mesin',
-  'Teknik Sipil',
-  'Teknik Lingkungan'
+  'Teknik Komputer',
+  'Teknik Lingkungan',
+  'Sistem Informasi'
 ];
 
 const SEMESTER_OPTIONS = [
