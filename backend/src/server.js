@@ -115,14 +115,16 @@ app.use((err, req, res, next) => {
   });
 });
 
-// Start Server
-const server = app.listen(config.port, () => {
-  console.log(`\n======================================================`);
-  console.log(`🚀 Himmah NWDI Kom. Teknik API Server Berjalan!`);
-  console.log(`📍 URL: http://localhost:${config.port}`);
-  console.log(`🏥 Health Check: http://localhost:${config.port}/api/health`);
-  console.log(`🛡️  Environment: ${config.nodeEnv}`);
-  console.log(`======================================================\n`);
-});
+// Start Server (Hanya dijalankan pada environment lokal / VPS, tidak pada Vercel Serverless)
+if (!process.env.VERCEL) {
+  app.listen(config.port, () => {
+    console.log(`\n======================================================`);
+    console.log(`🚀 Himmah NWDI Kom. Teknik API Server Berjalan!`);
+    console.log(`📍 URL: http://localhost:${config.port}`);
+    console.log(`🏥 Health Check: http://localhost:${config.port}/api/health`);
+    console.log(`🛡️  Environment: ${config.nodeEnv}`);
+    console.log(`======================================================\n`);
+  });
+}
 
 export default app;
