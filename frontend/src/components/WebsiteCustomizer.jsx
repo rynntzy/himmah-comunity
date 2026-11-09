@@ -506,7 +506,7 @@ export default function WebsiteCustomizer({ siteConfig, onSaveConfig, onResetCon
                     className="text-[11px] text-red-600 hover:underline flex items-center gap-1 font-semibold"
                   >
                     <Trash2 className="w-3 h-3" />
-                    Reset ke Ilustrasi Vektor
+                    Hapus Gambar / Reset
                   </button>
                 )}
               </div>
@@ -523,7 +523,7 @@ export default function WebsiteCustomizer({ siteConfig, onSaveConfig, onResetCon
                     <div className="w-12 h-12 rounded-full bg-emerald-100 text-brand-primary flex items-center justify-center mx-auto mb-2 font-bold">
                       NWDI
                     </div>
-                    <p className="text-xs font-bold text-slate-700">Ilustrasi Vektor Kader Bawaan</p>
+                    <p className="text-xs font-bold text-slate-700">Belum Ada Gambar Terpilih</p>
                     <p className="text-[10px] text-slate-400 mt-1">Upload foto kader asli atau kegiatan kom. teknik</p>
                   </div>
                 )}
