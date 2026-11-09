@@ -1,6 +1,3 @@
-import React from 'react';
-import { CalendarCheck, CheckCircle2, Clock, MapPin, Users } from 'lucide-react';
-
 export default function InfoSection({ onRegisterClick }) {
   const steps = [
     {

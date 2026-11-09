@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Logo from './Logo';
-import { Lock, User, Eye, EyeOff, LogIn, ArrowLeft, ShieldAlert, Sparkles, CheckCircle2 } from 'lucide-react';
+import { Lock, User, Eye, EyeOff, LogIn, ArrowLeft, ShieldAlert } from 'lucide-react';
 import { loginAdminApi } from '../services/api';
 
 export default function AdminLogin({ onLoginSuccess, onBackToHome }) {

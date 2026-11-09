@@ -20,13 +20,8 @@ import {
   Menu,
   ChevronLeft,
   ChevronRight,
-  TrendingUp,
   ShieldCheck,
   Check,
-  Calendar,
-  GraduationCap,
-  Save,
-  AlertCircle,
   Phone,
   MessageCircle
 } from 'lucide-react';

@@ -121,14 +121,13 @@ export const INITIAL_REGISTRATIONS = [
   }
 ];
 
-// Helper to seed to reach 127 records with valid noWa
+// Helper untuk mengambil data awal fallback jika backend offline
 export function getSeededData() {
   const saved = localStorage.getItem('himmah_nwdi_registrations');
   if (saved) {
     try {
       const parsed = JSON.parse(saved);
       if (Array.isArray(parsed) && parsed.length > 0) {
-        // Pastikan field noWa ada pada data lama
         return parsed.map((item, idx) => ({
           ...item,
           noWa: item.noWa || `0812${String(10000000 + (item.id || idx)).slice(1)}`
@@ -139,45 +138,5 @@ export function getSeededData() {
     }
   }
 
-  const prodis = ['Teknik Informatika', 'Sistem Informasi', 'Teknik Elektro', 'Teknik Mesin', 'Teknik Sipil'];
-  const firstNames = ['Rizki', 'Farhan', 'Bayu', 'Dimas', 'Aditya', 'Galih', 'Yusuf', 'Ilham', 'Fikri', 'Hafiz', 'Nadia', 'Salma', 'Putri', 'Zahra', 'Rina', 'Mega', 'Sari', 'Indah', 'Fitri', 'Tiara'];
-  const lastNames = ['Saputra', 'Ramadhan', 'Hidayat', 'Kurniawan', 'Pratama', 'Nugroho', 'Wibowo', 'Firmansyah', 'Santoso', 'Utomo', 'Wijaya', 'Siregar', 'Lestari', 'Rahmawati', 'Anggraini', 'Kusuma'];
-
-  const extended = [...INITIAL_REGISTRATIONS];
-  let currId = 13;
-
-  const needed = [
-    { name: 'Pemrograman Web', target: 48 - 4 },
-    { name: 'Robotik', target: 37 - 4 },
-    { name: 'Desain Grafis', target: 42 - 4 }
-  ];
-
-  needed.forEach(group => {
-    for (let i = 0; i < group.target; i++) {
-      const fn = firstNames[Math.floor(Math.random() * firstNames.length)];
-      const ln = lastNames[Math.floor(Math.random() * lastNames.length)];
-      const prodi = prodis[Math.floor(Math.random() * prodis.length)];
-      const sem = Math.floor(Math.random() * 8) + 1;
-      const wapa = [2021, 2022, 2023, 2024, 2025][Math.floor(Math.random() * 5)];
-      
-      const day = Math.floor(Math.random() * 25) + 1;
-      const hour = Math.floor(Math.random() * 12) + 8;
-      const min = Math.floor(Math.random() * 60);
-      const randomPhone = `08${[12, 13, 21, 52, 77, 81][Math.floor(Math.random() * 6)]}${Math.floor(1000000 + Math.random() * 9000000)}`;
-
-      extended.push({
-        id: currId++,
-        nama: `${fn} ${ln}`,
-        noWa: randomPhone,
-        prodi,
-        semester: sem,
-        tahunWapa: wapa,
-        kelas: [group.name],
-        tanggalDaftar: `2025-10-${day < 10 ? '0' + day : day}T${hour < 10 ? '0' + hour : hour}:${min < 10 ? '0' + min : min}:00.000Z`
-      });
-    }
-  });
-
-  localStorage.setItem('himmah_nwdi_registrations', JSON.stringify(extended));
-  return extended;
+  return INITIAL_REGISTRATIONS;
 }
