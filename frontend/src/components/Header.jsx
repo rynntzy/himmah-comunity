@@ -15,7 +15,7 @@ export default function Header({ onNavigate, contactConfig = {} }) {
   const navItems = [
     { id: 'beranda', label: 'Beranda' },
     { id: 'tentang', label: 'Tentang' },
-    { id: 'kelas', label: 'Kelas Khusus' },
+    { id: 'kelas', label: 'Komunitas' },
     { id: 'informasi', label: 'Informasi' },
   ];
 

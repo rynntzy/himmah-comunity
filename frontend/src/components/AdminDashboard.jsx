@@ -310,7 +310,7 @@ export default function AdminDashboard({
     if (clean.startsWith('0')) {
       clean = '62' + clean.slice(1);
     }
-    return `https://wa.me/${clean}?text=${encodeURIComponent(`Halo ${name}, kami dari panitia Kelas Khusus Himmah NWDI Kom. Teknik.`)}`;
+    return `https://wa.me/${clean}?text=${encodeURIComponent(`Halo ${name}, kami dari panitia Komunitas Himmah NWDI Kom. Teknik.`)}`;
   };
 
   const renderClassBadge = (kelas) => {
@@ -628,7 +628,7 @@ export default function AdminDashboard({
                         <th className="py-3 px-3">Prodi</th>
                         <th className="py-3 px-2 text-center">Sem.</th>
                         <th className="py-3 px-2 text-center">WaPA</th>
-                        <th className="py-3 px-3">Kelas Pilihan</th>
+                        <th className="py-3 px-3">Komunitas Pilihan</th>
                         <th className="py-3 px-3">Tanggal Daftar</th>
                         <th className="py-3 px-4 text-center w-28">Aksi</th>
                       </tr>
@@ -895,7 +895,7 @@ export default function AdminDashboard({
               </div>
 
               <div>
-                <label className="text-xs font-bold text-slate-700 block mb-1.5">Pilihan Kelas Khusus</label>
+                <label className="text-xs font-bold text-slate-700 block mb-1.5">Pilihan Komunitas</label>
                 <div className="flex flex-wrap gap-2">
                   {siteConfig.classes.map(c => {
                     const isChecked = formInput.kelas.includes(c.name);
@@ -1023,7 +1023,7 @@ export default function AdminDashboard({
               </div>
 
               <div>
-                <label className="text-xs font-bold text-slate-700 block mb-1.5">Pilihan Kelas Khusus</label>
+                <label className="text-xs font-bold text-slate-700 block mb-1.5">Pilihan Komunitas</label>
                 <div className="flex flex-wrap gap-2">
                   {siteConfig.classes.map(c => {
                     const isChecked = formInput.kelas.includes(c.name);
@@ -1092,7 +1092,7 @@ export default function AdminDashboard({
                   </div>
                   <div>
                     <div className="font-bold text-slate-900 text-sm sm:text-base">{detailModalItem.nama}</div>
-                    <div className="text-slate-500 text-xs">Pendaftar Kelas Khusus</div>
+                    <div className="text-slate-500 text-xs">Pendaftar Komunitas</div>
                   </div>
                 </div>
 
@@ -1145,7 +1145,7 @@ export default function AdminDashboard({
               </div>
 
               <div className="p-3 bg-slate-50 rounded-xl">
-                <span className="text-[11px] text-slate-400 block mb-1">Kelas yang Diikuti</span>
+                <span className="text-[11px] text-slate-400 block mb-1">Komunitas yang Diikuti</span>
                 {renderClassBadge(detailModalItem.kelas)}
               </div>
             </div>

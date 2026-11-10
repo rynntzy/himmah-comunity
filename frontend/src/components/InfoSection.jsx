@@ -2,8 +2,8 @@ export default function InfoSection({ onRegisterClick }) {
   const steps = [
     {
       num: '01',
-      title: 'Pilih Kelas Peminatan',
-      desc: 'Tentukan satu atau lebih kelas khusus: Pemrograman Web, Robotik, atau Desain Grafis sesuai minatmu.'
+      title: 'Pilih Komunitas Peminatan',
+      desc: 'Tentukan satu atau lebih komunitas: Pemrograman Web, Robotik, atau Desain Grafis sesuai minatmu.'
     },
     {
       num: '02',
@@ -13,7 +13,7 @@ export default function InfoSection({ onRegisterClick }) {
     {
       num: '03',
       title: 'Konfirmasi WhatsApp',
-      desc: 'Setelah terdaftar, bergabung ke grup koordinasi kelas khusus kader melalui kontak admin.'
+      desc: 'Setelah terdaftar, bergabung ke grup koordinasi komunitas kader melalui kontak admin.'
     },
     {
       num: '04',
@@ -31,7 +31,7 @@ export default function InfoSection({ onRegisterClick }) {
             Alur & Jadwal
           </div>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-            Informasi Pendaftaran Kelas
+            Informasi Pendaftaran Komunitas
           </h2>
           <p className="text-sm sm:text-base text-slate-600 mt-2">
             Ikuti 4 langkah mudah berikut untuk bergabung dalam program pembinaan kader teknik.
@@ -65,7 +65,7 @@ export default function InfoSection({ onRegisterClick }) {
               Siap Mengembangkan Potensimu?
             </h4>
             <p className="text-xs sm:text-sm text-emerald-100 max-w-xl">
-              Kelas khusus ini gratis dan diprioritaskan bagi seluruh kader aktif Himmah NWDI Komisariat Teknik. Kuota terbatas untuk efektivitas pendampingan praktek.
+              Program komunitas ini gratis dan diprioritaskan bagi seluruh kader aktif Himmah NWDI Komisariat Teknik. Kuota terbatas untuk efektivitas pendampingan praktek.
             </p>
           </div>
 

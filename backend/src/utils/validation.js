@@ -45,14 +45,14 @@ export function validateRegistration(body) {
     errors.push('Tahun WaPA harus angka antara 2018-2030.');
   }
 
-  // Kelas pilihan
+  // Kelas / Komunitas pilihan
   const validKelas = ['Pemrograman Web', 'Robotik', 'Desain Grafis'];
   if (!body.kelas || !Array.isArray(body.kelas) || body.kelas.length === 0) {
-    errors.push('Pilih minimal satu kelas khusus.');
+    errors.push('Pilih minimal satu komunitas.');
   } else {
     const invalidKelas = body.kelas.filter((k) => !validKelas.includes(k));
     if (invalidKelas.length > 0) {
-      errors.push(`Kelas tidak valid: ${invalidKelas.join(', ')}.`);
+      errors.push(`Komunitas tidak valid: ${invalidKelas.join(', ')}.`);
     }
   }
 

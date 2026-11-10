@@ -40,7 +40,7 @@ export default function RegistrationForm({
 }) {
   const {
     title = 'Formulir Pendaftaran',
-    subtitle = 'Isi data diri Anda untuk mendaftar kelas khusus yang dipilih.',
+    subtitle = 'Isi data diri Anda untuk mendaftar komunitas yang dipilih.',
     slogan = 'Belajar • Berkarya • Berkhidmat',
     kaderImage = null
   } = formConfig;
@@ -112,7 +112,7 @@ export default function RegistrationForm({
     }
 
     if (selectedClasses.length === 0) {
-      newErrors.kelas = 'Pilih minimal satu kelas khusus';
+      newErrors.kelas = 'Pilih minimal satu komunitas';
     }
 
     setErrors(newErrors);
@@ -393,7 +393,7 @@ export default function RegistrationForm({
                 <div>
                   <div className="flex items-center justify-between mb-1.5">
                     <label className="block text-xs sm:text-sm font-semibold text-slate-700">
-                      Kelas Pilihan
+                      Komunitas Pilihan
                     </label>
                     <span className="text-[11px] text-slate-400">
                       (Bisa memilih 1 atau lebih)
@@ -403,7 +403,7 @@ export default function RegistrationForm({
                   <div className="p-3 bg-slate-50 rounded-2xl border border-slate-200 flex flex-wrap items-center justify-between gap-2.5">
                     <div className="flex flex-wrap items-center gap-2">
                       {selectedClasses.length === 0 ? (
-                        <span className="text-xs text-slate-400 italic">Belum ada kelas yang dipilih</span>
+                        <span className="text-xs text-slate-400 italic">Belum ada komunitas yang dipilih</span>
                       ) : (
                         selectedClasses.map((cls) => (
                           <span 
@@ -491,7 +491,7 @@ export default function RegistrationForm({
               Pendaftaran Berhasil!
             </h4>
             <p className="text-sm text-slate-600 mb-6">
-              Selamat, data Anda telah berhasil tersimpan dalam sistem pendaftaran kelas khusus Himmah NWDI Kom. Teknik.
+              Selamat, data Anda telah berhasil tersimpan dalam sistem pendaftaran komunitas kader Himmah NWDI Kom. Teknik.
             </p>
 
             {registeredData && (
@@ -516,7 +516,7 @@ export default function RegistrationForm({
                   <span className="font-semibold text-slate-800">Sem. {registeredData.semester} / {registeredData.tahunWapa}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-slate-500">Kelas:</span>
+                  <span className="text-slate-500">Komunitas:</span>
                   <span className="font-semibold text-brand-primary">{registeredData.kelas.join(', ')}</span>
                 </div>
               </div>

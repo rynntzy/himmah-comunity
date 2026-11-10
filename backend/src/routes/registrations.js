@@ -6,8 +6,8 @@ const router = Router();
 
 /**
  * POST /api/registrations
- * Endpoint publik – kader mendaftar kelas khusus.
- * Mencegah pendaftaran ganda berdasarkan nama + noWa + kelas yang sama.
+ * Endpoint publik – kader mendaftar komunitas.
+ * Mencegah pendaftaran ganda berdasarkan nama + noWa + kelas/komunitas yang sama.
  */
 router.post('/', async (req, res) => {
   try {

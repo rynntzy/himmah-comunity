@@ -2,7 +2,7 @@
   "name": "himmah-nwdi-kom-teknik",
   "version": "1.0.0",
   "private": true,
-  "description": "Website Pendaftaran Kelas Khusus Kader Himmah NWDI Kom. Teknik",
+  "description": "Website Pendaftaran Komunitas Kader Himmah NWDI Kom. Teknik",
   "scripts": {
     "build": "npm --prefix frontend run build",
     "dev:frontend": "npm --prefix frontend run dev",

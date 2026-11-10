@@ -252,7 +252,7 @@ export default function App() {
           onRegisterClick={scrollToRegister} 
         />
 
-        {/* Pilihan Kelas Khusus */}
+        {/* Pilihan Komunitas */}
         <ClassSelectionSection 
           classes={siteConfig.classes}
           selectedClasses={selectedClasses}

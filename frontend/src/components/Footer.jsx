@@ -78,7 +78,7 @@ export default function Footer({ contactConfig = {} }) {
         {/* Garis batas tipis & Copyright */}
         <div className="mt-6 pt-6 border-t border-emerald-800/60 flex flex-col sm:flex-row items-center justify-between text-[11px] text-emerald-300/70 gap-2">
           <p>© {new Date().getFullYear()} Himmah NWDI Kom. Teknik. Hak Cipta Dilindungi.</p>
-          <p>Sistem Pendaftaran Kelas Khusus Kader</p>
+          <p>Sistem Pendaftaran Komunitas Kader</p>
         </div>
       </div>
     </footer>

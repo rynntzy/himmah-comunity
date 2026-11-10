@@ -7,8 +7,8 @@ export default function HeroSection({ heroConfig, onRegisterClick }) {
     titlePrefix = 'Himmah NWDI',
     titleSuffix = 'Kom. Teknik',
     subtitle = 'Bersama Mencetak Kader Unggul, Kreatif, dan Berdaya Saing di Era Digital',
-    badgeText = 'Penerimaan Kelas Khusus Kader 2025/2026',
-    ctaText = 'Daftar Kelas Khusus',
+    badgeText = 'Penerimaan Komunitas Kader 2025/2026',
+    ctaText = 'Daftar Komunitas',
     heroImage = null
   } = heroConfig || {};
 

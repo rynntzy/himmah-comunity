@@ -100,7 +100,7 @@ export default function ClassSelectionSection({ classes = [], selectedClasses = 
                     </>
                   ) : (
                     <>
-                      <span>Pilih Kelas</span>
+                      <span>Pilih Komunitas</span>
                       <ArrowRight className="w-3.5 h-3.5 text-brand-primary group-hover:translate-x-0.5 transition-transform" />
                     </>
                   )}

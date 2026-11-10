@@ -98,7 +98,7 @@ export default function WebsiteCustomizer({ siteConfig, onSaveConfig, onResetCon
 
   const handleRemoveClass = (index) => {
     if (config.classes.length <= 1) {
-      alert('Minimal harus ada satu kelas khusus');
+      alert('Minimal harus ada satu komunitas');
       return;
     }
     const updated = config.classes.filter((_, i) => i !== index);
@@ -168,7 +168,7 @@ export default function WebsiteCustomizer({ siteConfig, onSaveConfig, onResetCon
       <div className="flex items-center gap-2 overflow-x-auto pb-1 border-b border-slate-200">
         {[
           { id: 'hero', label: '1. Banner Hero & Gedung', icon: ImageIcon },
-          { id: 'classes', label: '2. Kelola Kelas Khusus', icon: Layers },
+          { id: 'classes', label: '2. Kelola Komunitas', icon: Layers },
           { id: 'kader', label: '3. Foto & Slogan Kader', icon: FileText },
           { id: 'contact', label: '4. Kontak & Sosmed', icon: MessageCircle },
         ].map(tab => {
@@ -330,14 +330,14 @@ export default function WebsiteCustomizer({ siteConfig, onSaveConfig, onResetCon
       )}
 
       {/* ========================================================= */}
-      {/* TAB 2: KELOLA KELAS KHUSUS (CRUD KELAS) */}
+      {/* TAB 2: KELOLA KOMUNITAS */}
       {/* ========================================================= */}
       {activeSubTab === 'classes' && (
         <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-xs space-y-6">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-slate-100 gap-3">
             <div>
-              <h3 className="text-base font-bold text-slate-900">Daftar Pilihan Kelas Khusus</h3>
-              <p className="text-xs text-slate-500">Tambah, edit nama, deskripsi, atau upload gambar thumbnail khusus untuk tiap kelas.</p>
+              <h3 className="text-base font-bold text-slate-900">Daftar Pilihan Komunitas</h3>
+              <p className="text-xs text-slate-500">Tambah, edit nama, deskripsi, atau upload gambar thumbnail khusus untuk tiap komunitas.</p>
             </div>
 
             <button
@@ -660,11 +660,11 @@ export default function WebsiteCustomizer({ siteConfig, onSaveConfig, onResetCon
       {showAddClassModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/50 backdrop-blur-xs animate-fadeIn">
           <div className="bg-white rounded-3xl p-6 sm:p-7 max-w-md w-full shadow-2xl border border-slate-100">
-            <h3 className="text-lg font-bold text-slate-900 mb-4">Tambah Kelas Khusus Baru</h3>
+            <h3 className="text-lg font-bold text-slate-900 mb-4">Tambah Komunitas Baru</h3>
 
             <div className="space-y-4">
               <div>
-                <label className="text-xs font-bold text-slate-700 block mb-1">Nama Kelas</label>
+                <label className="text-xs font-bold text-slate-700 block mb-1">Nama Komunitas</label>
                 <input
                   type="text"
                   placeholder="Misal: Kecerdasan Buatan (AI)"
@@ -720,7 +720,7 @@ export default function WebsiteCustomizer({ siteConfig, onSaveConfig, onResetCon
                 onClick={handleAddClass}
                 className="flex-1 py-2.5 rounded-full bg-brand-primary text-xs font-bold text-white hover:bg-brand-dark shadow-sm"
               >
-                Simpan Kelas
+                Simpan Komunitas
               </button>
             </div>
           </div>

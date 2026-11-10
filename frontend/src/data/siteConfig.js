@@ -3,8 +3,8 @@ export const DEFAULT_SITE_CONFIG = {
     titlePrefix: 'Himmah NWDI',
     titleSuffix: 'Kom. Teknik',
     subtitle: 'Bersama Mencetak Kader Unggul, Kreatif, dan Berdaya Saing di Era Digital',
-    badgeText: 'Penerimaan Kelas Khusus Kader 2025/2026',
-    ctaText: 'Daftar Kelas Khusus',
+    badgeText: 'Penerimaan Komunitas Kader 2025/2026',
+    ctaText: 'Daftar Komunitas',
     heroImage: null, // URL atau Data URL gambar custom hero gedung
   },
   classes: [
@@ -32,13 +32,13 @@ export const DEFAULT_SITE_CONFIG = {
   ],
   formSection: {
     title: 'Formulir Pendaftaran',
-    subtitle: 'Isi data diri Anda untuk mendaftar kelas khusus yang dipilih.',
+    subtitle: 'Isi data diri Anda untuk mendaftar komunitas yang dipilih.',
     slogan: 'Belajar • Berkarya • Berkhidmat',
     kaderImage: null // URL atau Data URL gambar custom kader/kegiatan
   },
   contact: {
     whatsappNumber: '6281234567890',
-    whatsappText: 'Halo Admin Himmah NWDI Kom. Teknik, saya ingin bertanya tentang kelas khusus.',
+    whatsappText: 'Halo Admin Himmah NWDI Kom. Teknik, saya ingin bertanya tentang komunitas.',
     instagramUrl: 'https://instagram.com',
     youtubeUrl: 'https://youtube.com',
     telegramUrl: 'https://t.me',
@@ -50,7 +50,11 @@ export function getSavedSiteConfig() {
   const saved = localStorage.getItem('himmah_nwdi_site_config');
   if (saved) {
     try {
-      const parsed = JSON.parse(saved);
+      const sanitizedSaved = saved
+        .replaceAll('Kelas Khusus', 'Komunitas')
+        .replaceAll('kelas khusus', 'komunitas')
+        .replaceAll('Kelas khusus', 'Komunitas');
+      const parsed = JSON.parse(sanitizedSaved);
       return { ...DEFAULT_SITE_CONFIG, ...parsed };
     } catch (e) {
       console.error('Failed to parse site config from storage', e);
