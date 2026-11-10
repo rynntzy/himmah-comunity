@@ -169,7 +169,7 @@ export default function WebsiteCustomizer({ siteConfig, onSaveConfig, onResetCon
         {[
           { id: 'hero', label: '1. Banner Hero & Gedung', icon: ImageIcon },
           { id: 'classes', label: '2. Kelola Komunitas', icon: Layers },
-          { id: 'kader', label: '3. Foto & Slogan Kader', icon: FileText },
+          { id: 'kader', label: '3. Foto Banner Kader', icon: FileText },
           { id: 'contact', label: '4. Kontak & Sosmed', icon: MessageCircle },
         ].map(tab => {
           const Icon = tab.icon;
@@ -447,7 +447,7 @@ export default function WebsiteCustomizer({ siteConfig, onSaveConfig, onResetCon
         <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-xs space-y-6">
           <div className="flex items-center justify-between pb-4 border-b border-slate-100">
             <div>
-              <h3 className="text-base font-bold text-slate-900">Ilustrasi / Foto Kader & Slogan</h3>
+              <h3 className="text-base font-bold text-slate-900">Foto / Banner Kader</h3>
               <p className="text-xs text-slate-500">Kustomisasi foto kader pada bagian formulir atau gunakan foto dokumentasi asli.</p>
             </div>
           </div>
@@ -455,19 +455,6 @@ export default function WebsiteCustomizer({ siteConfig, onSaveConfig, onResetCon
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
             <div className="lg:col-span-7 space-y-4">
-              <div>
-                <label className="block text-xs font-bold text-slate-700 mb-1.5">
-                  Slogan Banner Kader
-                </label>
-                <input
-                  type="text"
-                  value={config.formSection.slogan}
-                  onChange={(e) => handleFormSectionChange('slogan', e.target.value)}
-                  placeholder="Contoh: Belajar • Berkarya • Berkhidmat"
-                  className="w-full text-xs font-bold text-brand-primary px-3.5 py-2.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-1 focus:ring-emerald-500"
-                />
-              </div>
-
               <div>
                 <label className="block text-xs font-bold text-slate-700 mb-1.5">
                   Judul Formulir

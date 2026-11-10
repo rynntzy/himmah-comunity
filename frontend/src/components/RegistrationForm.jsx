@@ -181,15 +181,7 @@ export default function RegistrationForm({
           <div className="grid grid-cols-1 lg:grid-cols-12 items-center">
             
             {/* Bagian Kiri: Ilustrasi / Foto Kader */}
-            <div className="lg:col-span-5 bg-gradient-to-b from-[#EAF6ED] via-[#F3FAF5] to-white p-6 sm:p-10 flex flex-col justify-center items-center text-center relative border-b lg:border-b-0 lg:border-r border-emerald-100/80 min-h-[380px]">
-              
-              {/* Slogan Badge */}
-              <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-sm border border-emerald-200 shadow-sm px-3.5 py-1.5 rounded-2xl transform rotate-2 z-20">
-                <span className="text-xs sm:text-sm font-extrabold text-brand-primary tracking-wide">
-                  {slogan}
-                </span>
-              </div>
-
+            <div className="lg:col-span-5 bg-white p-6 sm:p-10 flex flex-col justify-center items-center text-center relative border-b lg:border-b-0 lg:border-r border-slate-100 min-h-[380px]">
               {kaderImage ? (
                 <div className="w-full max-w-[280px] sm:max-w-xs h-80 rounded-2xl overflow-hidden border border-emerald-200 shadow-md relative">
                   <img src={kaderImage} alt="Kader Himmah NWDI" className="w-full h-full object-cover" />
