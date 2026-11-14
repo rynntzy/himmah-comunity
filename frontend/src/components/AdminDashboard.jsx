@@ -31,6 +31,7 @@ import { downloadExcelApi } from '../services/api';
 
 const PRODI_LIST = [
   'Teknik Informatika',
+  'Teknik Komputer',
   'Sistem Informasi',
   'Teknik Elektro',
   'Teknik Mesin',

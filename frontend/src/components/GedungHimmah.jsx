@@ -134,11 +134,6 @@ export default function GedungHimmah({ className = "w-full h-full object-cover r
         {/* Rerumputan Hijau di Pinggir */}
         <rect x="0" y="385" width="600" height="15" fill="#16A34A" opacity="0.85"/>
       </svg>
-
-      {/* Floating Accent Badge */}
-      <div className="absolute bottom-3 left-4 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-emerald-100 shadow-sm flex items-center gap-2">
-        <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-      </div>
     </div>
   );
 }

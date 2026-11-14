@@ -67,14 +67,9 @@ export default function HeroSection({ heroConfig, onRegisterClick }) {
                   <div className="relative w-full h-full rounded-3xl overflow-hidden border border-emerald-100 shadow-xl group">
                     <img 
                       src={heroImage} 
-                      alt="Gedung Himmah NWDI" 
+                      alt="" 
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
-                    <div className="absolute bottom-4 left-4 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-emerald-100 shadow-sm flex items-center gap-2">
-                      <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                      <span className="text-xs font-semibold text-brand-900">Sekretariat Himmah NWDI Kom. Teknik</span>
-                    </div>
                   </div>
                 ) : (
                   <GedungHimmah className="w-full h-full object-cover shadow-xl hover:shadow-2xl transition-shadow duration-300" />

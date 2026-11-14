@@ -23,6 +23,7 @@ export function validateRegistration(body) {
   // Program Studi
   const validProdi = [
     'Teknik Informatika',
+    'Teknik Komputer',
     'Sistem Informasi',
     'Teknik Elektro',
     'Teknik Mesin',
